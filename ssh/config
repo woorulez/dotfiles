@@ -1,8 +1,0 @@
-Host *
-  #StrictHostKeyChecking no
-  ServerAliveInterval 60
-  ServerAliveCountMax 3
-  TCPKeepAlive yes
-  ControlPath ~/.ssh/cm-%r@%h:%p
-  ControlMaster auto
-  ControlPersist 0
