@@ -1,0 +1,6 @@
+# ignore backups
+*.bak
+
+# ssh
+ssh/**
+!ssh/config
