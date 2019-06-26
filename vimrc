@@ -17,3 +17,4 @@ colo seoul256
 
 set nowrap
 set hlsearch
+set encoding=utf-8

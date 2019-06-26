@@ -1,0 +1,34 @@
+# Use bash from homebrew
+# install by `brew install bash`
+# add `/usr/local/bin/bash` to `/etc/shells`
+# chage login shell with `chsh -s /usr/local/bin/bash`
+
+# use colors
+export CLICOLOR=1
+
+# prompt
+export PS1="\W\[\e[32m\]\\$\[\e[m\] "
+
+# add paths
+PATH=$HOME/bin:$PATH # local bin
+PATH=/usr/local/bin:$PATH # homebrew
+export PATH
+
+# Golang
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
+
+# pyenv
+# `brew install pyenv`
+if command -v pyenv 1> /dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+# pyenv-virtualenv
+# `brew install pyenv-virtualenv`
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init -)"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
